@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TABLAUX</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('TON_IMAGE_DE_FOND.jpg') no-repeat center center fixed;
+            background-size: cover;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: white;
+        }
+
+        h3 {
+            color: #ff3c3c;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        a {
+            text-decoration: none;
+            color: #ff3c3c;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: white;
+        }
+
+        table {
+            background-color: rgba(0, 0, 0, 0.75);
+            color: white;
+            border: 2px solid #ff3c3c;
+            border-collapse: collapse;
+            margin: 20px;
+        }
+
+        td {
+            padding: 20px;
+            text-align: center;
+            border: 1px solid #ff3c3c;
+        }
+
+        td[style] {
+            border: none; /* permet à tes styles personnalisés de passer */
+        }
+
+        td[style*="background"] {
+            color: white;
+        }
+
+        center {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+
+    <table width="200" cellpadding="50" border="2" style="float: left;">
+        <tr>
+            <td colspan="2">A</td>
+        </tr>
+        <tr>
+            <td>B</td>
+            <td>C</td>
+        </tr>
+    </table>
+
+    <table width="200" cellpadding="20" border="2" style="float: right;">
+        <tr>
+            <td rowspan="2">D</td>
+            <td>E</td>
+        </tr>
+        <tr>
+            <td>F</td>
+        </tr>
+    </table>
+
+    <center>
+        <table cellpadding="20" border="2">
+            <tr>
+                <td rowspan="2" style="background: chartreuse;">A</td>
+                <td colspan="2" style="background: darkblue;">B</td>
+            </tr>
+            <tr>
+                <td colspan="2" style="background: blueviolet;">C</td>
+            </tr>
+            <tr>
+                <td rowspan="2" style="border: 1px dashed aquamarine;">D</td>
+                <td rowspan="2" style="background: darkslategrey;">E</td>
+                <td style="background: yellow;">F</td>
+            </tr>
+            <tr>
+                <td style="background: black;">G</td>
+            </tr>
+        </table>
+        <a href="Formulaire 1.html"><h3>VOS COORDONNÉES</h3></a>
+    </center>
+
+</body>
+</html>

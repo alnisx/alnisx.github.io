@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INSCRIPTION</title>
+    <style>
+        body {
+    background-image: url(new-york-5155189.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #f0f0f0;
+}
+
+h1 {
+    color: #e60000;
+    font-size: 2.8em;
+    margin-top: 40px;
+    text-shadow: 1px 1px 5px #000;
+}
+
+form {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 700px;
+    margin: 30px auto;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    color: #fff;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #e60000;
+    border-radius: 5px;
+    background-color: #f5f5f5;
+    color: #111;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="date"]:focus,
+select:focus {
+    border-color: #ff1a1a;
+    outline: none;
+}
+
+fieldset {
+    border: 2px solid #e60000;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.05);
+    color: #fff;
+}
+
+legend {
+    color: #e60000;
+    font-weight: bold;
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    background-color: #e60000;
+    border: none;
+    padding: 12px 25px;
+    margin: 15px 10px 0 0;
+    color: #fff;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    background-color: #ff3333;
+}
+
+.centered {
+    text-align: center;
+}
+
+    </style>
+</head>
+<body>
+    <div class="centered">
+        <h1>INSCRIPTION</h1>
+    </div>
+
+    <form method="post" action="traitement.php">
+        <label for="pseudo">Votre nom d'utilisateur :</label>
+        <input type="text" name="pseudo" id="pseudo" required>
+
+        <label for="mail">Votre adresse e-mail :</label>
+        <input type="email" name="mail" id="mail" required>
+
+        <label for="pass">Nouveau mot de passe :</label>
+        <input type="password" name="pass" id="pass" required>
+
+        <label for="pass_confirm">Confirmez votre mot de passe :</label>
+        <input type="password" name="pass_confirm" id="pass_confirm" required>
+
+        <label for="pays">Dans quel pays vivez-vous ?</label>
+        <select name="pays" id="pays">
+            <option value="Benin">Bénin</option>
+            <option value="France">France</option>
+            <option value="Afghanistan">Afghanistan</option>
+            <option value="Cote d'Ivoire">Côte d'Ivoire</option>
+            <option value="Angleterre">Angleterre</option>
+            <option value="Japon">Japon</option>
+            <option value="Chine">Chine</option>
+            <option value="Corée">Corée</option>
+            <option value="Vatican">Vatican</option>
+        </select>
+
+        <label for="naissance">Votre date de naissance :</label>
+        <input type="date" name="naissance" id="naissance" required>
+
+        <label for="photo">Une photo pour vous identifier :</label>
+        <input type="file" name="photo" id="photo" accept="image/*">
+
+        <label for="nom">Quel est votre nom ?</label>
+        <input type="text" name="nom" id="nom">
+
+        <label for="prenom">Quel est votre prénom ?</label>
+        <input type="text" name="prenom" id="prenom">
+
+        <fieldset>
+            <legend>Votre souhait</legend>
+            <label><input type="radio" name="souhait" value="riche"> Être riche</label><br>
+            <label><input type="radio" name="souhait" value="celebre"> Être célèbre</label><br>
+            <label><input type="radio" name="souhait" value="intelligent"> Être <strong>encore</strong> plus intelligent</label><br>
+            <label><input type="radio" name="souhait" value="autre"> Autre...</label>
+        </fieldset>
+
+        <div class="centered">
+            <input type="submit" value="S'inscrire">
+            <input type="reset" value="Recommencer">
+        </div>
+    </form>
+</body>
+</html>
